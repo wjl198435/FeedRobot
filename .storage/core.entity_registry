@@ -1,0 +1,17 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "person.wang_jin_liang",
+                "name": null,
+                "platform": "person",
+                "unique_id": "cd4fe752f1fb435f9003b5e8ab2b334b"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

@@ -1,0 +1,77 @@
+{
+    "data": {
+        "config": {
+            "resources": [
+                {
+                    "type": "js",
+                    "url": "/local/xiaomi-vacuum-card.js?v=2.2.0"
+                }
+            ],
+            "title": "Home",
+            "views": [
+                {
+                    "badges": [
+                        "person.wang_jin_liang",
+                        "sun.sun"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "feedrobot.1_feed_robot"
+                                },
+                                {
+                                    "entity": "feedrobot.5_feed_robot"
+                                },
+                                {
+                                    "entity": "feedrobot.0_feed_robot"
+                                },
+                                {
+                                    "entity": "feedrobot.2_feed_robot"
+                                },
+                                {
+                                    "entity": "feedrobot.3_feed_robot"
+                                },
+                                {
+                                    "entity": "feedrobot.4_feed_robot"
+                                },
+                                {
+                                    "entity": "vacuum.0_ground_floor"
+                                }
+                            ],
+                            "title": "",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "person.wang_jin_liang"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "buttons": true,
+                            "entity": "vacuum.0_ground_floor",
+                            "labels": {
+                                "battery": "Batterie",
+                                "filter": "Filtre",
+                                "main_brush": "Brosse Principale",
+                                "mode": "Puissance",
+                                "sensor": "Capteurs",
+                                "side_brush": "Brosse Lat\u00e9rale",
+                                "status": "Etat"
+                            },
+                            "name": "Xiaomi Vacuum",
+                            "type": "custom:xiaomi-vacuum-card"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

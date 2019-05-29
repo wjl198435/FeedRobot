@@ -1,0 +1,9 @@
+home-assistant.log
+home-assistant_v2*
+.DS_Store
+.idea/*
+.idea/workspace.xml
+appdaemon/logs/*
+appdaemon/compiled
+.storage/*
+.idea/*

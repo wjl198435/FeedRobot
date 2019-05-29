@@ -1,0 +1,18 @@
+2019-05-29 18:21:46 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for feedrobot which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-05-29 18:21:46 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for haiwa_piio which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-05-29 18:21:52 WARNING (MainThread) [homeassistant.helpers.service] Unable to find services.yaml for the feedrobot integration
+2019-05-29 18:22:40 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.4488146560] 'DemoVacuum' object has no attribute 'async_start'
+Traceback (most recent call last):
+  File "/Users/wangjinliang/IOT_Raspberry/home-assistant/homeassistant/components/websocket_api/commands.py", line 121, in handle_call_service
+    connection.context(msg))
+  File "/Users/wangjinliang/IOT_Raspberry/home-assistant/homeassistant/core.py", line 1150, in async_call
+    self._execute_service(handler, service_call))
+  File "/Users/wangjinliang/IOT_Raspberry/home-assistant/homeassistant/core.py", line 1172, in _execute_service
+    await handler.func(service_call)
+  File "/Users/wangjinliang/IOT_Raspberry/home-assistant/homeassistant/helpers/entity_component.py", line 194, in handle_service
+    required_features
+  File "/Users/wangjinliang/IOT_Raspberry/home-assistant/homeassistant/helpers/service.py", line 316, in entity_service_call
+    future.result()  # pop exception if have
+  File "/Users/wangjinliang/IOT_Raspberry/home-assistant/homeassistant/helpers/service.py", line 337, in _handle_service_platform_call
+    await getattr(entity, func)(**data)
+AttributeError: 'DemoVacuum' object has no attribute 'async_start'

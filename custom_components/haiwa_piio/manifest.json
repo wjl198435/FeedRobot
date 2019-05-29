@@ -1,0 +1,12 @@
+{
+    "domain": "haiwa_piio",
+    "name": "Haiwa Pi io",
+    "documentation": "https://www.home-assistant.io/components/demo",
+    "requirements": [],
+    "dependencies": [
+     
+    ],
+    "codeowners": [
+      
+    ]
+  }

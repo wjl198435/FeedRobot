@@ -1,0 +1,101 @@
+{
+    "data": {
+        "credentials": [
+            {
+                "auth_provider_id": null,
+                "auth_provider_type": "homeassistant",
+                "data": {
+                    "username": "\u738b\u91d1\u4eae"
+                },
+                "id": "db80c6c8a62c4733ba4e73f138c5053f",
+                "user_id": "fdbf879dd0bb4e81aaf45830396fd79e"
+            }
+        ],
+        "groups": [
+            {
+                "id": "system-admin",
+                "name": "Administrators"
+            },
+            {
+                "id": "system-users",
+                "name": "Users"
+            },
+            {
+                "id": "system-read-only",
+                "name": "Read Only"
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "created_at": "2019-05-29T02:56:11.042958+00:00",
+                "id": "e20301925f1c4df99283fc13839dfa44",
+                "jwt_key": "8fd377ea6d0a3707014270151c7eddd4b17b2961a655938685ee8c5599ad77e0642b0418bc64df4f087be95a3dbf7510ae7ad90671cecdbcebdba571b9a33e60",
+                "last_used_at": "2019-05-29T02:56:11.043010+00:00",
+                "last_used_ip": "127.0.0.1",
+                "token": "dd12c8130105c048e7e9952e575e9d1625bdb35c3a9fc270ce85741ed4d5cdb4599985b36dc7bc7fa358ac4ee7bb70450426c9706c1c9966aae8a1ce68d73cd3",
+                "token_type": "normal",
+                "user_id": "fdbf879dd0bb4e81aaf45830396fd79e"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "created_at": "2019-05-29T03:19:33.477828+00:00",
+                "id": "1db2cbad8b1f4e14b9a7cbc5969d8624",
+                "jwt_key": "4438d10b8ce2b4089d133e5da82b895c412437109c8575f4626416d85261ed8cbea284ab979d655d657adfafefb70915f908079de43b2a5fe1e257a3cce01315",
+                "last_used_at": "2019-05-29T10:09:31.036666+00:00",
+                "last_used_ip": "127.0.0.1",
+                "token": "d0d7f4043128bbf3721a0845654ed63fde5e78f546bb42b83ab0f05a427b87567959a6b348c1d8da4830e36b964b2c6e57851d016dcdea4f532bd1ddb6f7fc90",
+                "token_type": "normal",
+                "user_id": "fdbf879dd0bb4e81aaf45830396fd79e"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "created_at": "2019-05-29T07:21:58.271388+00:00",
+                "id": "e6e1f8ab22e54464b48f87f0d872aa98",
+                "jwt_key": "74566e13eb8149e9f33f7cc30b1cecfa2b043dc7f5caeca2129a22de5247b4250cd6dd2360969b740f4bde2cfa2999b59eaec908099136f5edd575514c58eddd",
+                "last_used_at": "2019-05-29T07:21:58.271454+00:00",
+                "last_used_ip": "127.0.0.1",
+                "token": "5746241c1ba01a0518b1fc28941d7b1508c525af19a4e04b86f2a45938a12c365cb8d1efa2c280e494fd27a041df6f3f025575fcb1658de130ee3a8f8323db42",
+                "token_type": "normal",
+                "user_id": "fdbf879dd0bb4e81aaf45830396fd79e"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://localhost:8123/",
+                "client_name": null,
+                "created_at": "2019-05-29T07:22:21.119987+00:00",
+                "id": "614f679eb3164ac7a4460475c01ef27e",
+                "jwt_key": "9d0bc0ea9c77c9010d3650933e7c612265e3224e46e63044580e94bd2b28a3c01cfb1285dbe90d6a2aa7bab5e343700ae0f4fe635ef4726d901714661055cfb7",
+                "last_used_at": "2019-05-29T10:07:03.620973+00:00",
+                "last_used_ip": "127.0.0.1",
+                "token": "add8e5f44db90cb8b6df3bd9b5ee14cf4d7b248882d388d7aa9be286554ba3176d9cb72d378779b7c9733a7d8d73cfe57b8f73dec95420ab10071536b320a8de",
+                "token_type": "normal",
+                "user_id": "fdbf879dd0bb4e81aaf45830396fd79e"
+            }
+        ],
+        "users": [
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "fdbf879dd0bb4e81aaf45830396fd79e",
+                "is_active": true,
+                "is_owner": true,
+                "name": "\u738b\u91d1\u4eae",
+                "system_generated": false
+            }
+        ]
+    },
+    "key": "auth",
+    "version": 1
+}
