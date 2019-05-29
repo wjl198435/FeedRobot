@@ -5,6 +5,9 @@ DOMAIN = 'haiwa_piio'
 HAIWA_DEVICES = 'haiwa_devices'
 from homeassistant.helpers import discovery
 
+# HAIWA_PLATFORMS = ['feedrobot', 'fan', 'vacuum', 'climate', 'air_quality']
+HAIWA_PLATFORMS = ['feedrobot']
+
 def setup(hass, config):
     if HAIWA_DEVICES not in hass.data:
         hass.data[HAIWA_DEVICES] = []
@@ -16,6 +19,7 @@ def setup(hass, config):
 
     # hass.helpers.discovery.load_platform('feedrobot', DOMAIN, {}, config)
     if hass.data[HAIWA_DEVICES]:
-        discovery.load_platform(hass, 'feedrobot', DOMAIN, {}, config)
-
+        for platform in HAIWA_PLATFORMS:
+            discovery.load_platform(hass, platform, DOMAIN, {}, config)
+        
     return True
