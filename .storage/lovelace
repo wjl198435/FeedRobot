@@ -55,11 +55,11 @@
                             "entity": "feedrobot.1_feed_robot",
                             "labels": {
                                 "battery": "\u6599\u6876\u5269\u4f59",
-                                "filter": "Filtre",
-                                "main_brush": "Brosse Principale",
-                                "mode": "Puissance",
-                                "sensor": "Capteurs",
-                                "side_brush": "Brosse Lat\u00e9rale",
+                                "filter": "\u4fdd\u517b\u65f6\u95f4",
+                                "main_brush": "\u9972\u517b\u603b\u65f6",
+                                "mode": "\u9972\u517b\u6a21\u5f0f",
+                                "sensor": "\u5ba4\u6e29",
+                                "side_brush": "\u9972\u6599\u6d88\u8017",
                                 "status": "\u5de5\u4f5c\u72b6\u6001"
                             },
                             "name": "1\u53f7\u9972\u517b\u673a",
