@@ -1,4 +1,4 @@
-class XiaomiVacuumCard extends Polymer.Element {
+class HaiwaFeedrobotCard extends Polymer.Element {
 
     static get template() {
         return Polymer.html`
@@ -115,7 +115,7 @@ class XiaomiVacuumCard extends Polymer.Element {
     cleanSpot() { this.callService(this._config.service.spot); }
 
     callService(service) {
-        this._hass.callService('vacuum', service, {entity_id: this._config.entity});
+        this._hass.callService('feedrobot', service, {entity_id: this._config.entity});
     }
 
     fireEvent(type, options = {}) {
@@ -167,11 +167,11 @@ class XiaomiVacuumCard extends Polymer.Element {
 
         const vendors = {
             xiaomi: {
-                image: '/local/img/vacuum.png',
+                image: '/local/img/feedrobot_pig.jpeg',
                 details: true,
             },
             ecovacs: {
-                image: '/local/img/vacuum_ecovacs.png',
+                image: '/local/img/feedrobot_pig.jpeg',
                 details: false,
                 buttons: {
                     stop: false,
@@ -186,7 +186,7 @@ class XiaomiVacuumCard extends Polymer.Element {
         };
 
         if (!config.entity) throw new Error('Please define an entity.');
-        if (config.entity.split('.')[0] !== 'vacuum') throw new Error('Please define a vacuum entity.');
+        if (config.entity.split('.')[0] !== 'feedrobot') throw new Error('Please define a vacuum entity.');
         if (config.vendor && !config.vendor in vendors) throw new Error('Please define a valid vendor.');
 
         const vendor = vendors[config.vendor] || vendors.xiaomi;
@@ -218,4 +218,4 @@ class XiaomiVacuumCard extends Polymer.Element {
     }
 }
 
-customElements.define('xiaomi-vacuum-card', XiaomiVacuumCard);
+customElements.define('haiwa-feedrobot-card', HaiwaFeedrobotCard);

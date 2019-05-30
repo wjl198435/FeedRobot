@@ -1,4 +1,4 @@
-"""Support for vacuum cleaner robots (botvacs)."""
+"""Support for feed robots (botvacs)."""
 from datetime import timedelta
 from functools import partial
 import logging
@@ -22,8 +22,8 @@ _LOGGER = logging.getLogger(__name__)
 DOMAIN = 'feedrobot'
 SCAN_INTERVAL = timedelta(seconds=20)
 
-GROUP_NAME_ALL_VACUUMS = 'all vacuum cleaners'
-ENTITY_ID_ALL_VACUUMS = group.ENTITY_ID_FORMAT.format('all_vacuum_cleaners')
+GROUP_NAME_ALL_VACUUMS = 'all feeds'
+ENTITY_ID_ALL_VACUUMS = group.ENTITY_ID_FORMAT.format('all_feedrobots')
 
 ATTR_BATTERY_ICON = 'battery_icon'
 ATTR_CLEANED_AREA = 'cleaned_area'
@@ -62,7 +62,7 @@ STATE_PAUSED = STATE_PAUSED
 STATE_RETURNING = 'returning'
 STATE_ERROR = 'error'
 
-DEFAULT_NAME = 'Vacuum cleaner robot'
+DEFAULT_NAME = 'feed robot'
 
 SUPPORT_TURN_ON = 1
 SUPPORT_TURN_OFF = 2
@@ -82,13 +82,13 @@ SUPPORT_START = 8192
 
 @bind_hass
 def is_on(hass, entity_id=None):
-    """Return if the vacuum is on based on the statemachine."""
+    """Return if the feedrobotis on based on the statemachine."""
     entity_id = entity_id or ENTITY_ID_ALL_VACUUMS
     return hass.states.is_state(entity_id, STATE_ON)
 
 
 async def async_setup(hass, config):
-    """Set up the vacuum component."""
+    """Set up the feedrobot component."""
     component = hass.data[DOMAIN] = EntityComponent(
         _LOGGER, DOMAIN, hass, SCAN_INTERVAL, GROUP_NAME_ALL_VACUUMS)
 
@@ -157,46 +157,46 @@ async def async_unload_entry(hass, entry):
 
 
 class _BaseVacuum(Entity):
-    """Representation of a base vacuum.
-    Contains common properties and functions for all vacuum devices.
+    """Representation of a base feedrobot .
+    Contains common properties and functions for all feedrobotdevices.
     """
 
     @property
     def supported_features(self):
-        """Flag vacuum cleaner features that are supported."""
+        """Flag feed features that are supported."""
         raise NotImplementedError()
 
     @property
     def battery_level(self):
-        """Return the battery level of the vacuum cleaner."""
+        """Return the battery level of the feed."""
         return None
 
     @property
     def fan_speed(self):
-        """Return the fan speed of the vacuum cleaner."""
+        """Return the fan speed of the feed."""
         return None
 
     @property
     def fan_speed_list(self):
-        """Get the list of available fan speed steps of the vacuum cleaner."""
+        """Get the list of available fan speed steps of the feed."""
         raise NotImplementedError()
 
     def stop(self, **kwargs):
-        """Stop the vacuum cleaner."""
+        """Stop the feed."""
         raise NotImplementedError()
 
     async def async_stop(self, **kwargs):
-        """Stop the vacuum cleaner.
+        """Stop the feed.
         This method must be run in the event loop.
         """
         await self.hass.async_add_executor_job(partial(self.stop, **kwargs))
 
     def return_to_base(self, **kwargs):
-        """Set the vacuum cleaner to return to the dock."""
+        """Set the feed to return to the dock."""
         raise NotImplementedError()
 
     async def async_return_to_base(self, **kwargs):
-        """Set the vacuum cleaner to return to the dock.
+        """Set the feed to return to the dock.
         This method must be run in the event loop.
         """
         await self.hass.async_add_executor_job(
@@ -214,11 +214,11 @@ class _BaseVacuum(Entity):
             partial(self.clean_spot, **kwargs))
 
     def locate(self, **kwargs):
-        """Locate the vacuum cleaner."""
+        """Locate the feed."""
         raise NotImplementedError()
 
     async def async_locate(self, **kwargs):
-        """Locate the vacuum cleaner.
+        """Locate the feed.
         This method must be run in the event loop.
         """
         await self.hass.async_add_executor_job(partial(self.locate, **kwargs))
@@ -235,11 +235,11 @@ class _BaseVacuum(Entity):
             partial(self.set_fan_speed, fan_speed, **kwargs))
 
     def send_command(self, command, params=None, **kwargs):
-        """Send a command to a vacuum cleaner."""
+        """Send a command to a feed."""
         raise NotImplementedError()
 
     async def async_send_command(self, command, params=None, **kwargs):
-        """Send a command to a vacuum cleaner.
+        """Send a command to a feed.
         This method must be run in the event loop.
         """
         await self.hass.async_add_executor_job(
@@ -247,16 +247,16 @@ class _BaseVacuum(Entity):
 
 
 class VacuumDevice(_BaseVacuum, ToggleEntity):
-    """Representation of a vacuum cleaner robot."""
+    """Representation of a feed robot."""
 
     @property
     def status(self):
-        """Return the status of the vacuum cleaner."""
+        """Return the status of the feed."""
         return None
 
     @property
     def battery_icon(self):
-        """Return the battery icon for the vacuum cleaner."""
+        """Return the battery icon for the feed."""
         charging = False
         if self.status is not None:
             charging = 'charg' in self.status.lower()
@@ -265,7 +265,7 @@ class VacuumDevice(_BaseVacuum, ToggleEntity):
 
     @property
     def state_attributes(self):
-        """Return the state attributes of the vacuum cleaner."""
+        """Return the state attributes of the feed."""
         data = {}
 
         if self.status is not None:
@@ -282,22 +282,22 @@ class VacuumDevice(_BaseVacuum, ToggleEntity):
         return data
 
     def turn_on(self, **kwargs):
-        """Turn the vacuum on and start cleaning."""
+        """Turn the feedroboton and start cleaning."""
         raise NotImplementedError()
 
     async def async_turn_on(self, **kwargs):
-        """Turn the vacuum on and start cleaning.
+        """Turn the feedroboton and start cleaning.
         This method must be run in the event loop.
         """
         await self.hass.async_add_executor_job(
             partial(self.turn_on, **kwargs))
 
     def turn_off(self, **kwargs):
-        """Turn the vacuum off stopping the cleaning and returning home."""
+        """Turn the feedrobotoff stopping the cleaning and returning home."""
         raise NotImplementedError()
 
     async def async_turn_off(self, **kwargs):
-        """Turn the vacuum off stopping the cleaning and returning home.
+        """Turn the feedrobotoff stopping the cleaning and returning home.
         This method must be run in the event loop.
         """
         await self.hass.async_add_executor_job(
@@ -316,16 +316,16 @@ class VacuumDevice(_BaseVacuum, ToggleEntity):
 
 
 class StateVacuumDevice(_BaseVacuum):
-    """Representation of a vacuum cleaner robot that supports states."""
+    """Representation of a feed robot that supports states."""
 
     @property
     def state(self):
-        """Return the state of the vacuum cleaner."""
+        """Return the state of the feed."""
         return None
 
     @property
     def battery_icon(self):
-        """Return the battery icon for the vacuum cleaner."""
+        """Return the battery icon for the feed."""
         charging = bool(self.state == STATE_DOCKED)
 
         return icon_for_battery_level(
@@ -333,7 +333,7 @@ class StateVacuumDevice(_BaseVacuum):
 
     @property
     def state_attributes(self):
-        """Return the state attributes of the vacuum cleaner."""
+        """Return the state attributes of the feed."""
         data = {}
 
         if self.battery_level is not None:

@@ -1,3 +1,3 @@
-2019-05-29 18:33:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for feedrobot which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
-2019-05-29 18:33:48 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for haiwa_piio which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
-2019-05-29 18:33:56 WARNING (MainThread) [homeassistant.helpers.service] Unable to find services.yaml for the feedrobot integration
+2019-05-30 19:45:45 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for feedrobot which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-05-30 19:45:45 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for haiwa_piio which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-05-30 19:45:53 WARNING (MainThread) [homeassistant.helpers.service] Unable to find services.yaml for the feedrobot integration

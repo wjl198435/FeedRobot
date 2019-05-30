@@ -4,7 +4,7 @@
             "resources": [
                 {
                     "type": "js",
-                    "url": "/local/xiaomi-vacuum-card.js?v=2.2.0"
+                    "url": "/local/haiwa-feedrobot-card.js"
                 }
             ],
             "title": "Home",
@@ -52,18 +52,18 @@
                         },
                         {
                             "buttons": true,
-                            "entity": "vacuum.0_ground_floor",
+                            "entity": "feedrobot.1_feed_robot",
                             "labels": {
-                                "battery": "Batterie",
+                                "battery": "\u6599\u6876\u5269\u4f59",
                                 "filter": "Filtre",
                                 "main_brush": "Brosse Principale",
                                 "mode": "Puissance",
                                 "sensor": "Capteurs",
                                 "side_brush": "Brosse Lat\u00e9rale",
-                                "status": "Etat"
+                                "status": "\u5de5\u4f5c\u72b6\u6001"
                             },
-                            "name": "Xiaomi Vacuum",
-                            "type": "custom:xiaomi-vacuum-card"
+                            "name": "1\u53f7\u9972\u517b\u673a",
+                            "type": "custom:haiwa-feedrobot-card"
                         }
                     ],
                     "path": "default_view",
